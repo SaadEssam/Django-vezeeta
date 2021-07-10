@@ -9,6 +9,7 @@ class Profile(models.Model):
     name = models.CharField(_("الإسم :"), max_length=50)
     who_i = models.TextField(_("نبذه عني :"), max_length=250)
     price = models.IntegerField(_("سعر الكشف :"))
+    image = models.ImageField(_("الصورة الشخصية"), upload_to='profile')
 
     class Meta:
         verbose_name = _("Profile")
