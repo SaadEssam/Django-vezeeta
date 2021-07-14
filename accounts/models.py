@@ -10,6 +10,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, verbose_name=_("user"), on_delete=models.CASCADE)
     name = models.CharField(_("الإسم :"), max_length=50)
     subtitle = models.CharField(_(" نبذه عنك :"), max_length=50)
+    address = models.CharField(_("المدينة :"), max_length=50)
     address_detail = models.CharField(_("العنوان بالتفصيل :"), max_length=50)
     number_phone = models.CharField(_("الهاتف :"), max_length=50)
     working_hours = models.CharField(_("عدد ساعات العمل :"), max_length=50)
