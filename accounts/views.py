@@ -1,8 +1,9 @@
+from django.http import request
 from accounts.models import Profile
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from .models import Profile
-from .forms import Login_Form
+from .forms import Login_Form , UserCreationForms
 from django.contrib.auth import authenticate, login
 
 # Create your views here.
@@ -33,3 +34,27 @@ def user_login(request):
     else:
         form = Login_Form()
     return render(request, 'user/login.html', {'form':form})
+
+
+# def signup(request):
+#     if request.method == 'POST':
+#         from = UserCreationForms(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             username = form.cleaned_data.get('username')
+#             password = form.cleaned_data.get('password')
+#             user = authenticate(username=username, password=password)
+#             login(request, user)
+#             return redirect('accounts:doctors_list')
+
+# else:
+#     form = UserCreationForms()
+
+# return render(request, 'user/signup.html', {'form':form})
+
+
+
+
+def myprofile(request):
+
+    return render(request, 'user/myprofile.html', {})
