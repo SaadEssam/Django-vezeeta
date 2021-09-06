@@ -37,21 +37,20 @@ def user_login(request):
     return render(request, 'user/login.html', {'form':form})
 
 
-# def signup(request):
-#     if request.method == 'POST':
-#         from = UserCreationForms(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             username = form.cleaned_data.get('username')
-#             password = form.cleaned_data.get('password')
-#             user = authenticate(username=username, password=password)
-#             login(request, user)
-#             return redirect('accounts:doctors_list')
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForms(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('accounts:doctors_list')
 
-# else:
-#     form = UserCreationForms()
-
-# return render(request, 'user/signup.html', {'form':form})
+    else:
+        form = UserCreationForms()
+    return render(request, 'user/signup.html', {'form':form})
 
 
 

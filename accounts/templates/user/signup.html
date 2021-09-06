@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
@@ -10,33 +11,34 @@
         <div class="col-md-9" >
             <form method="POST" enctype="multipart/form-data">
                 <h4 class="auth-header">أنشاء حساب جديد</h4>
+                {% csrf_token %}
                 <div class="form-group">
-                    <input type="" name="">
+                    {{ form.username|as_crispy_field }}
                 </div>
                 <div class="form-group">
-                    <input type="" name="">
+                    {{ form.email|as_crispy_field }}
     
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="" name="">
+                            {{ form.first_name|as_crispy_field }}
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="" name="">
-                    </div>
+                            {{ form.last_name|as_crispy_field }}
+                        </div>
                 </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="" name="">
+                            {{ form.password1|as_crispy_field }}
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="" name="">
-                    </div>
+                            {{ form.password2|as_crispy_field }}
+                        </div>
                 </div>
                 <div class="buttons-w"><button type="submit" class="btn btn-success">التسجيل</button></div>
     
