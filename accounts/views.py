@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from .models import Profile
 from .forms import Login_Form , UserCreationForms
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -54,7 +55,7 @@ def user_login(request):
 
 
 
-
+@login_required()
 def myprofile(request):
 
     return render(request, 'user/myprofile.html', {})

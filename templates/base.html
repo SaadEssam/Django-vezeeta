@@ -54,9 +54,9 @@
                         <div class="main-menu  d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="">احجز دكتورك</a></li>|
+                                    <li><a href="{% url 'accounts:doctors_list'%}">احجز دكتورك</a></li>|
                                     <li><a href="">المقالات</a></li>|
-                                    <li><a href="">الصفحه الشخصيه </a></li>|
+                                    <li><a href="{% url 'accounts:myprofile'%}">الصفحه الشخصيه </a></li>|
                                     <li><a href="contact.html">اتصل بنا</a></li>
                                 </ul>
                             </nav>
@@ -65,18 +65,22 @@
                     <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                         <div class="Appointment">
                             
-                            <div class="phone_num d-none d-xl-block"></div>
-                            <div class="d-none d-lg-block">
-                                <a class="boxed-btn3" href="">قدم نفسك</a>
-                            </div>
-                            
-                            <div class="phone_num d-none d-xl-block">
-                                <a class="boxed-btn3" href="">سجل الدخول</a>
-                            </div>
-                            <div class="d-none d-lg-block">
-                                <a class="boxed-btn3" style="background-color: crimson;" href="">التسجيل</a>
-                            </div>
-                            
+                            {% if user.is_authenticated %}
+                                
+                                <div class="phone_num d-none d-xl-block"></div>
+                                <div class="d-none d-lg-block">
+                                    <a class="boxed-btn3" href="">قدم نفسك</a>
+                                </div>
+                                
+                                {% else %}
+                                <div class="phone_num d-none d-xl-block">
+                                    <a class="boxed-btn3" href="">سجل الدخول</a>
+                                </div>
+                                <div class="d-none d-lg-block">
+                                    <a class="boxed-btn3" style="background-color: crimson;" href="">التسجيل</a>
+                                </div>
+                            {% endif %}
+
                         </div>
                     </div>
                     <div class="col-12">
