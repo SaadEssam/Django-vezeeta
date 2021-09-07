@@ -48,7 +48,7 @@ class Profile(models.Model):
     working_hours = models.CharField(_("عدد ساعات العمل :"), max_length=50)
     waiting_time = models.CharField(_("مده الانتظار :"), max_length=50, blank=True, null=True)
     who_i = models.TextField(_("نبذه عني :"), max_length=250, blank=True, null=True)
-    specialist_doctor = models.CharField(_("متخصص في ؟"), max_length=50, blank=True, null=True)
+    specialist_doctor = models.CharField(_("متخصص في ؟"), max_length=200, blank=True, null=True)
     price = models.IntegerField(_("سعر الكشف :"), blank=True, null=True)
     image = models.ImageField(_("الصورة الشخصية"), upload_to='profile', blank=True, null=True)
     slug = models.SlugField(_("slug"),blank=True, null=True)

@@ -27,24 +27,91 @@
                                 {{ user_form.last_name|as_crispy_field }}
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                    </div>
-                    <div class="form-group">
-                    </div>
+                    <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
+                                {{ profile_form.name|as_crispy_field }}
+                            </div>
                         </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.surname|as_crispy_field }}
+                            </div>
                         </div>
+                    <div class="form-group">
+                        {{ profile_form.who_i|as_crispy_field }}
                     </div>
-                <div class="form-group">
-                <div class="buttons-w"><button type="submit" class="btn btn-success">تعديل</button></div>
+                    <div class="form-group">
+                        {{ profile_form.subtitle|as_crispy_field }}
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.address|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.address_detail|as_crispy_field }}
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.price|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.number_phone|as_crispy_field }}
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.working_hours|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.waiting_time|as_crispy_field }}
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.specialist_doctor|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.doctor|as_crispy_field }}
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.facebook|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.twitter|as_crispy_field }}
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                {{ profile_form.google|as_crispy_field }}
+                            </div>
+                    </div>
+                    <div class="form-group">
+                    <div class="buttons-w"><button type="submit" class="btn btn-success">تعديل</button></div>
+                    </div>
+                    </form>
                 </div>
-
-            </form>
+            </div>
         </div>
-        </div>
-    </div>
     </div>
 
 

@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.forms.widgets import PasswordInput
 from django.contrib.auth.forms import UserCreationForm
+from .models import Profile
 
 
 class UserCreationForms(UserCreationForm):
@@ -35,3 +36,13 @@ class UpdateUserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('first_name' , 'last_name' , 'email')
+
+
+class UpdateProfileForm(forms.ModelForm):
+
+    class Meta:
+        model = Profile
+        fields = ('name' , 'surname', 'subtitle', 'address',
+        'address_detail', 'number_phone', 'working_hours',
+        'waiting_time', 'who_i', 'price', 'facebook',
+        'twitter', 'google', 'doctor', 'specialist_doctor' )
